@@ -127,7 +127,8 @@ CONFIG_OPTION_ENUM_DEFINE_STATIC_MAPS(SlicingMode)
 static t_config_enum_values s_keys_map_SupportMaterialPattern {
     { "rectilinear",        smpRectilinear },
     { "rectilinear-grid",   smpRectilinearGrid },
-    { "honeycomb",          smpHoneycomb }
+    { "honeycomb",          smpHoneycomb },
+    { "gyroid",             smpGyroid }
 };
 CONFIG_OPTION_ENUM_DEFINE_STATIC_MAPS(SupportMaterialPattern)
 
@@ -2648,9 +2649,11 @@ void PrintConfigDef::init_fff_params()
     def->enum_values.push_back("rectilinear");
     def->enum_values.push_back("rectilinear-grid");
     def->enum_values.push_back("honeycomb");
+    def->enum_values.push_back("gyroid");
     def->enum_labels.push_back(L("Rectilinear"));
     def->enum_labels.push_back(L("Rectilinear grid"));
     def->enum_labels.push_back(L("Honeycomb"));
+    def->enum_labels.push_back(L("Gyroid"));
     def->mode = comAdvanced;
     def->set_default_value(new ConfigOptionEnum<SupportMaterialPattern>(smpRectilinear));
 

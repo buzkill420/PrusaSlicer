@@ -80,7 +80,7 @@ enum class SlicingMode
 };
 
 enum SupportMaterialPattern {
-    smpRectilinear, smpRectilinearGrid, smpHoneycomb,
+    smpRectilinear, smpRectilinearGrid, smpHoneycomb, smpGyroid
 };
 
 enum SupportMaterialStyle {
